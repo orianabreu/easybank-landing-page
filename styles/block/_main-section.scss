@@ -1,0 +1,100 @@
+.section {
+    max-width: 100vw;
+    min-height: 85vh;
+
+    @include tablet {
+        min-height: 100vh;
+    }
+}
+
+.main-section {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    @include tablet {
+        position: static;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    &__text-container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 4%;
+
+        @include tablet {
+            order: 1;
+            width: 100%;
+            height: 500px;
+            padding: 5% 15%;
+            text-align: center;
+            align-items: center;
+        }
+
+        @include mobile {
+            padding: 2% 10%;
+            justify-content: flex-start;
+        }
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: $darkBlue;
+    } 
+
+    &__img-container {
+        width: 80%;
+        background-image: url(../../images/bg-intro-desktop.svg);
+        background-position: left;
+
+        @include tablet {
+            background-image: url(../../images/bg-intro-mobile.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            width: 100%;
+            order: 0;
+        }
+
+        @include mobile {
+            height: fit-content;
+        }
+    }
+
+    &__mockup {
+        position: absolute;
+        top: -150px;
+        left: 800px;
+        z-index: 2;
+
+        @include tablet {
+            width: 70vw;
+            position: relative;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @include mobile {
+            top: -30px;
+        }
+    }
+}
+
+.paragraph {
+    font-weight: 300;
+    color: $grayishBlue;
+    line-height: 1.5rem;
+    margin: 30px 0;
+
+    strong {
+        font-weight: normal;
+    }
+}

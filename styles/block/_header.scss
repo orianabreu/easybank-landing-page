@@ -1,0 +1,44 @@
+.header {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    z-index: 99;
+
+    @include mobile {
+        padding: 0 40px;
+    }
+
+    nav {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    .btn--invite {
+        @include tablet {
+            display: none;
+        }
+    }
+}
+
+.header__navlinks {
+    display: flex;
+    align-items: center;
+
+    a {
+       color: $grayishBlue;
+       margin-right: 20px; 
+       font-weight: 300;
+    }
+}
+
+.header__menu-icon {
+    display: none;
+
+    @include tablet {
+        display: inline-block;
+        width: 40px;
+    }
+}

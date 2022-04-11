@@ -1,0 +1,74 @@
+.articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $lightGray;
+    padding: 0 7%;
+
+    @include tablet {
+        padding: 7%;
+        text-align: center;
+    }
+
+    &__articles-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__article {
+        width: 23%;
+        background-color: $white;
+        border-radius: 10px;
+
+        @include tablet {
+            width: 80%;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__article-image {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        border-radius: 10px 10px 0 0;
+
+        &--currency {
+            background-image: url(../../images/image-currency.jpg);
+        }
+        &--restaurant {
+            background-image: url(../../images/image-restaurant.jpg);
+        }
+        &--plane {
+            background-image: url(../../images/image-plane.jpg);
+        }
+        &--confetti {
+            background-image: url(../../images/image-confetti.jpg);
+        }
+    }
+
+    &__article-info {
+        padding: 10%;
+        color: $grayishBlue;
+        font-weight: 300;
+
+        .writter {
+            font-size: 0.8rem;
+        }
+        .article-title {
+            font-size: 1rem;
+            color: $darkBlue;
+            font-weight: 300;
+            margin: 10px 0;
+        }
+        .description {
+            font-size: 0.9rem;
+        }
+    }
+}

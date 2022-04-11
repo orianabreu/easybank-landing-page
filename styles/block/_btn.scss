@@ -1,0 +1,10 @@
+.btn {
+    border-radius: 25px;
+    padding: 8px 25px;
+    border: none;
+    color: $white;
+    background: $limeGreen;
+    background: linear-gradient(90deg, $limeGreen 0%, $brightCyan 69%);
+    font-weight: bold;
+    cursor: pointer;
+}
